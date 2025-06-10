@@ -1,0 +1,1157 @@
+[
+    {
+        "TC#": "VTC_P800_DTCT_001",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing VCMInfo29_CHNL_RE_CANFD message and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC1 0x00 0x87 0x10 to read Snapshot data of DTC $C10087\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_002",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing BrakeSysFeatures_2 message and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC1 0x21 0x87 0x10 to read Snapshot data of DTC $C12187\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_003",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing PSCMInfo1_CHNL_RE_CANFD message and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC1 0x31 0x87 0x10 to read Snapshot data of DTC $C13187\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_004",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing RCMInfo1_CHNL_RE_CANFD message and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC1 0x51 0x87 0x10 to read Snapshot  of DTC $C15187\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_005",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting StabCtlBrk_B_Avail 0x0 and wait for 120s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x00 0x10 to read Snapshot  of DTC $C41500\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_006",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehLatCompAActl_Qf: 0x0 - Faulty and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x00 0x10 to read Snapshot  of DTC $C41500\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_007",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehLongCompAActl_Qf: 0x0 - Faulty and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x00 0x10 to read Snapshot  of DTC $C41500\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_008",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehRolCompAActl_Qf: 0x0 - Faulty and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x00 0x10 to read Snapshot  of DTC $C41500\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_009",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehYawCompWActl_Qf - 0x2 - Not Within Specifications and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x08 0x10 to read Snapshot  of DTC $C41508\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_010",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehYawCompWActl_Qf - 0x1 - No Data Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x08 0x10 to read Snapshot  of DTC $C41508\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_011",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehYawCompWActl_Qf - 0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x08 0x10 to read Snapshot  of DTC $C41508\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_012",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehLongOverGndAEstQf - 0x2 - Not Within Specifications and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x08 0x10 to read Snapshot  of DTC $C41508\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_013",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehLongOverGndAEstQf - 0x1 - No Data Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x08 0x10 to read Snapshot  of DTC $C41508\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_014",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  VehLongOverGndAEstQf - 0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x08 0x10 to read Snapshot  of DTC $C41508\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_015",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  Brakes E2E Failure -E2E Checksum Invalid and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x15 0x83 0x10 to read Snapshot  of DTC $C41583\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_016",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by PscmSteCtrlFdbck_Grp_Cntr: Signal does not increment and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x20 0x00 0x10 to read Snapshot  of DTC $C42000\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_017",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by PscmSteCtrlFdbck_Grp_CRC: Checksum does not match and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x20 0x00 0x10 to read Snapshot  of DTC $C42000\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_018",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by VcmSteCtrlInfo_Grp_CmpnstdStePinAnQf2: 0x0 - Faulty and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x20 0x00 0x10 to read Snapshot  of DTC $C42000\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_019",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by PscmSteCtrlFdbck_Grp_RelStePinAnValid -0x0 -False and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x20 0x00 0x10 to read Snapshot  of DTC $C42000\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_020",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  Steering E2E Failure -E2E Checksum Invalid and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x20 0x83 0x10 to read Snapshot  of DTC $C42083\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_021",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting YawRolPtch_Grp_VehRolWActl - 0xFFFE- No Data Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_022",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting YawRolPtch_Grp_VehRolWActl - 0xFFFF - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_023",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting YawRolPtch_Grp_Cntr-  Signal does not increment and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_024",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting YawRolPtch_Grp_VehRolWActlDQf -0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_025",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting YawRolPtch_Grp_VehRolWActlDQf -0x1 - No_Data_Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_026",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting YawRolPtch_Grp_VehRolWActlDQf -  0x2 Not within Specifications and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_027",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  AccelData_Grp_VehLat2AActl -0X1FFE - No Data Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_028",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  AccelData_Grp_VehLat2AActl -0x1FFF - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_029",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehLatAActlDQf -0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_030",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehLatAActlDQf -0x1 - No_Data_Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_031",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehLatAActlDQf -0x2 - Not_Within_Specificationss and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_032",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  AccelData_Grp_Cntr- Signal Does not Increment and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_033",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  AccelData_Grp_VehLong2AActl - 0X1FFE - No Data Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_034",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting  AccelData_Grp_VehLong2AActl - 0x1FFF - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_035",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehLongAActlDQf -0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_036",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehLongAActlDQf -0x1 - No_Data_Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_037",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehLongAActlDQf -0x2 - Not_Within_Specifications and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_038",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehVert2AActl -0X1FFE - No Data Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_039",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehVert2AActl -0x1FFF - Faulty  and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_040",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehVertAActlDQf - 0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_041",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting AccelData_Grp_VehVertAActlDQf -0x1 - No_Data_Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xC4 0x52 0x00 0x10 to read Snapshot data of DTC C45200\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_042",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10287- VCMInfo30_CHNL_RE_CANFD Message missing  and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x02 0x87 0x10 to read Snapshot data of DTC D10287\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_043",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10287- VCMInfo6_CHNL_RE_CANFD Message missing  and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x02 0x87 0x10 to read Snapshot data of DTC D10287\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_044",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting ApedPosPcActlArbQf -0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_045",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting ApedPosPcActlArbQf -0x1 - No_Data_Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_046",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting ApedPosPcActlArbQf -0x2 - Not_Within_Specifications and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_047",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehVEstGrp_Grp_Cntr  and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_048",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehVEstGrp_Grp_CRC and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_049",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehVEstGrp_Grp_VehVEstQf - 0x0 - Faulty and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_050",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehVEstGrp_Grp_VehVEstQf -0x1 - No_Data_Exists and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_051",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting VehVEstGrp_Grp_VehVEstQf -0x2 - Not_Within_Specification and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x00 0x10 to read Snapshot  of DTC $D10300\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_052",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10887- CCZMInfo22_CHNL_RE_CANFD Message missing  and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x08 0x87 0x10 to read Snapshot data of DTC D10887\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_053",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10383 -Vehicle Control Module CMA Invalid - Message specific CMA Authentication Failure and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x83 0x10 to read Snapshot data of DTC D10383\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_054",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10383 - Vehicle Control Module E2E Failure - StePinAnGrpand wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x83 0x10 to read Snapshot data of DTC D10383\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_055",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10383- Vehicle Control Module E2E Failure - VehVEstGrp and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x03 0x83 0x10 to read Snapshot data of DTC D10383\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_056",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10900- VehPwMdeStat -0x0 - Not Used and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x09 0x00 0x10 to read Snapshot data of DTC D10900\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_057",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting D10900- VehPwMdeStat -0x3 - Not Used and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xD1 0x09 0x00 0x10 to read Snapshot data of DTC D10900\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_058",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting E11B05- Key Distribution Error and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xE1 0x1B 0x05 0x10 to read Snapshot data of DTC E11B05\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_059",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting E11B08- Message Authentication Failure and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xE1 0x1B 0x08 0x10 to read Snapshot data of DTC E11B08\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_060",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting E11B81- TripResetSyncMessage_RE_CAN_FD - FVM Sync Message Error and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xE1 0x1B 0x81 0x10 to read Snapshot data of DTC E11B81\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_061",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting E11B51- Initial Key Configuration Not Complete and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xE1 0x1B 0x51 0x10 to read Snapshot data of DTC E11B51\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_062",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting E11B87- Freshness Value Manager Out of Sync and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xE1 0x1B 0x87 0x10 to read Snapshot data of DTC E11B87\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_063",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by setting E11B43- SHE/HSM Self-Test Failed and wait for 5s.\n2)Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0xE1 0x1B 0x43 0x10 to read Snapshot data of DTC E11B43\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "At step 3 of test procedure, ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_064",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by makingLeft Front Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x03 0x14 0x10 to read Snapshot data of DTC $5A0314\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 5",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 5"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_064_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by makingLeft Front Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x03 0x14 0x10 to read Snapshot data of DTC $5A0314\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0314\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 5",
+        "Actual Result": "4) DTC $5A0314\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 5"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_065",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2)Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.5 A\nFront Right Corner Valve Current = 0.5 A\nRear Left Corner Valve Current = 0.5 A\nRear Right Corner Valve Current = 0.5 A\n3) Induce fault by making Left Front Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x03  0x12 0x10 to read Snapshot data of DTC $5A0312\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF \n8) Send Diag Request  0x19 0x04 0x5A 0x03  0x11 0x10 to verify no snapshot record data is available for DTC $5A0312\n",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 6",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 6"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_065_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2)Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.5 A\nFront Right Corner Valve Current = 0.5 A\nRear Left Corner Valve Current = 0.5 A\nRear Right Corner Valve Current = 0.5 A\n3) Induce fault by making Left Front Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x03  0x12 0x10 to read Snapshot data of DTC $5A0312\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF \n8) Send Diag Request  0x19 0x04 0x5A 0x03  0x11 0x10 to verify no snapshot record data is available for DTC $5A0312\n",
+        "Expected Result": "4) DTC $5A0312\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 6",
+        "Actual Result": "4) DTC $5A0312\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 6"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_066",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Right Front Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x04 0x14 0x10 to read Snapshot data of DTC $5A0414\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 7",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 7"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_066_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Right Front Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x04 0x14 0x10 to read Snapshot data of DTC $5A0414\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0414\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 7",
+        "Actual Result": "4) DTC $5A0414\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 7"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_067",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Right Right Front Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x04 0x12 0x10 to read Snapshot data of DTC $5A0412\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 8",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 8"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_067_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Right Right Front Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x04 0x12 0x10 to read Snapshot data of DTC $5A0412\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0412\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 8",
+        "Actual Result": "4) DTC $5A0412\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 8"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_068",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Left Rear Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x05 0x14 0x10 to read Snapshot data of DTC $5A0514\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 9",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 9"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_068_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Left Rear Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x05 0x14 0x10 to read Snapshot data of DTC $5A0514\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0514\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 9",
+        "Actual Result": "4) DTC $5A0514\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 9"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_069",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Left Rear Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x05 0x12 0x10 to read Snapshot data of DTC $5A0512\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = A",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = A"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_069_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Left Rear Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x05 0x12 0x10 to read Snapshot data of DTC $5A0512\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0512\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = A",
+        "Actual Result": "4) DTC $5A0512\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = A"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_070",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by makingRight Rear Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x06 0x14 0x10 to read Snapshot data of DTC $5A0614\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = B",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = B"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_070_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by makingRight Rear Height Sensor - Circuit Short To Ground or Open and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x06 0x14 0x10 to read Snapshot data of DTC $5A0614\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0614\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = B",
+        "Actual Result": "4) DTC $5A0614\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = B"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_071",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Right Rear Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x06 0x12 0x10 to read Snapshot data of DTC $5A0612\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = C",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = C"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_071_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by making Right Rear Height Sensor - Circuit Short to Battery and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x5A 0x06 0x12 0x10 to read Snapshot data of DTC $5A0612\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "4) DTC $5A0612\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = C",
+        "Actual Result": "4) DTC $5A0612\n5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = C"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_072",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  0 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Battery Voltage below Threshold value and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0xF0 0x03 0x16 0x10 to read Snapshot data of DTC $F00316\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 36",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  0 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 36"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_073",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Battery Voltage above Threshold value and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0xF0 0x03 0x17 0x10 to read Snapshot data of DTC $F00317\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 35",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Outside air temperature (Outside_Air_Temp_Stat) = 20 C\ne. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 35"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_074",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Left Front Damper Solenoid  - Circuit Short to Ground 510C11 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0C 0x11 0x10 to read Snapshot data of DTC $510C11\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 37",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 37"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_075",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Left Front Damper Solenoid  - Circuit Short to Battery  510C12  and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0C 0x12 0x10 to read Snapshot data of DTC $510C12\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 38",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 38"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_076",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Left Front Damper Solenoid  - Circuit Open 510C13  and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0C 0x13 0x10 to read Snapshot data of DTC $510C13\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 39",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 39"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_077",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Right Front Damper Solenoid  - Circuit Short to Ground  510D11 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0D 0x11 0x10 to read Snapshot data of DTC $510D11\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 41",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 41"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_078",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Right Front Damper Solenoid  - Circuit Short to Battery 510D12 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0D 0x12 0x10 to read Snapshot data of DTC $510D12\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 42",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 42"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_079",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Right Front Damper Solenoid  - Circuit Open 510D13 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0D 0x13 0x10 to read Snapshot data of DTC $510D13\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 43",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 43"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_080",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Left Rear Damper Solenoid  - Circuit Short to Ground  510E11 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0E 0x11 0x10 to read Snapshot data of DTC $510E11\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 45",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 45"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_081",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Left Rear Damper Solenoid  - Circuit Short to Battery  510E12 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0E 0x12 0x10 to read Snapshot data of DTC $510E12\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 46",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 46"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_082",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Left Rear Damper Solenoid  - Circuit Open  510E13 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0E 0x13 0x10 to read Snapshot data of DTC $510E13\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 47",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 47"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_083",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Right Rear Damper Solenoid  - Circuit Short to Ground 510F11 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0F 0x11 0x10 to read Snapshot data of DTC $510F11\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 49",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 49"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_084",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Right Rear Damper Solenoid  - Circuit Short to Battery 510F12 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0F 0x12 0x10 to read Snapshot data of DTC $510F12\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 50",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 50"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_085",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Send Diag Request 0x10 0x01\n2) Set the following parameters to verify the same in Snapshot record when DTC is latched :\nb. Set the Total Distance =  10km\nc. Set the Vehicle Speed  =  2 kph\nd. Set the following in the range of 0.3 to 1.6 A:\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\n3) Induce fault by setting Right Rear Damper Solenoid  - Circuit Open 510F13 and wait for 200ms.\n4) Send Diag Request  0x19 0x04 0x51 0x0F 0x13 0x10 to read Snapshot data of DTC $510F13\n5) Verify the values of the parameters set in Step 2\n6) Remove the fault that is set in Step 3 and wait for 200ms.\n7) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 51",
+        "Actual Result": "5) Values shall set in snapshot record as below:\nb. Total Distance =  10km\nc. Vehicle Speed  =  2 kph\nd. Valve current :\nFront Left Corner Valve Current = 0.3 A\nFront Right Corner Valve Current = 0.3 A\nRear Left Corner Valve Current = 0.3 A\nRear Right Corner Valve Current = 0.3 A\nf. ECU Power Supply Voltage = 12 V \ng. Internal Fail Code = 51"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_086",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Component Internal Failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x96 0x10 to read Snapshot data of DTC $5A0396\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_086_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Component Internal Failure(0x1ED @ A15..A6; A0=1) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x96 0x10 to read Snapshot data of DTC $5A0396 \n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0396\n",
+        "Actual Result": "3) ECU responded with positive response including DTC $5A0396"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_087",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Magnetic field strength out of range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x96 0x10 to read Snapshot data of DTC $5A0396\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_087_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Magnetic field strength out of range ( 0x1EB @ A15..A6; A0=1)and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x96 0x10 to read Snapshot data of DTC $5A0396\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0396\n",
+        "Actual Result": "3) ECU responded with positive response including DTC $5A0396"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_088",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x83 0x10 to read Snapshot data of DTC 5A0383\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_088_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - CRC data transmission failure(incorrect value C0..C2) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x83 0x10 to read Snapshot data of DTC 5A0383\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0393",
+        "Actual Result": "3) ECU responded with positive response including DTC $5A0393"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_089",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x82 0x10 to read Snapshot data of DTC 5A0382\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_089_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Alive / Sequence Counter Incorrect / Not Updated (f0...f2)and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x82 0x10 to read Snapshot data of DTC 5A0382\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0382",
+        "Actual Result": "3) ECU responded with positive response including DTC $5A0382"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_090",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x86 0x10 to read Snapshot data of DTC 5A0386\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_090_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x87 0x10 to read Snapshot data of DTC $5A0386\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0386",
+        "Actual Result": "3) ECU responded with positive response including DTC $5A0386"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_091",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x86 0x10 to read Snapshot data of DTC 5A0386\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_091_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x87 0x10 to read Snapshot data of DTC $5A0386\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0386",
+        "Actual Result": "3) ECU responded with positive response including DTC $5A0386"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_092",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Component Internal Failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x96 0x10 to read Snapshot data of DTC $5A0496\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_092_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Component Internal Failure(0x1ED @ A15..A6; A0=1) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x96 0x10 to read Snapshot data of DTC $5A0496\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0496",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0496"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_093",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Magnetic field strength out of range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x96 0x10 to read Snapshot data of DTC $5A0496\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_093_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Magnetic field strength out of range ( 0x1EB @ A15..A6; A0=1)and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x96 0x10 to read Snapshot data of DTC $5A0496\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0496",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0496"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_094",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x83 0x10 to read Snapshot data of DTC 5A0483\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_094_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x83 0x10 to read Snapshot data of DTC 5A0483\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0483",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0483"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_095",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x82 0x10 to read Snapshot data of DTC 5A0482\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_095_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x82 0x10 to read Snapshot data of DTC 5A0482\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0482",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0483"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_096",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x86 0x10 to read Snapshot data of DTC 5A0486\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_096_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x86 0x10 to read Snapshot data of DTC 5A0486\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0486",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0486"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_097",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x86 0x10 to read Snapshot data of DTC 5A0486\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_097_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x87 0x10 to read Snapshot data of DTC 5A0486\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0486",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0486"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_098",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Component Internal Failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x96 0x10 to read Snapshot data of DTC $5A0596\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_098_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Component Internal Failure(0x1ED @ A15..A6; A0=1) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x96 0x10 to read Snapshot data of DTC $5A0596\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0596",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0596"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_099",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Magnetic field strength out of range ( 0x1EB @ A15..A6; A0=1)and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x96 0x10 to read Snapshot data of DTC $5A0596\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_099_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Magnetic field strength out of range ( 0x1EB @ A15..A6; A0=1)and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x96 0x10 to read Snapshot data of DTC $5A0596\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0596",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0596"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_100",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x83 0x10 to read Snapshot data of DTC 5A0583\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_100_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x83 0x10 to read Snapshot data of DTC 5A0583\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0583",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0583"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_101",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x82 0x10 to read Snapshot data of DTC 5A0582\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_101_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x82 0x10 to read Snapshot data of DTC 5A0582\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0582",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0582"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_102",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x86 0x10 to read Snapshot data of DTC 5A0586\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_102_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x87 0x10 to read Snapshot data of DTC 5A0586\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0586",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0586"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_103",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x86 0x10 to read Snapshot data of DTC 5A0586\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_103_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x87 0x10 to read Snapshot data of DTC 5A0586\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0586",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0586"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_104",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Component Internal Failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x96 0x10 to read Snapshot data of DTC $5A0696\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_104_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Component Internal Failure(0x1ED @ A15..A6; A0=1)and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x96 0x10 to read Snapshot data of DTC $5A0696\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0696",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0696"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_105",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Magnetic field strength out of range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x96 0x10 to read Snapshot data of DTC $5A0696\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_105_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Magnetic field strength out of range( 0x1EB @ A15..A6; A0=1) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x96 0x10 to read Snapshot data of DTC $5A0696\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0696",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0696"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_106",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x83 0x10 to read Snapshot data of DTC 5A0683\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_106_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - CRC data transmission failure and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x83 0x10 to read Snapshot data of DTC 5A0683\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0683",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0683"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_107",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x82 0x10 to read Snapshot data of DTC 5A0682\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_107_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Alive / Sequence Counter Incorrect / Not Updated and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x82 0x10 to read Snapshot data of DTC 5A0682\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0682",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0682"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_108",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x86 0x10 to read Snapshot data of DTC 5A0686\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_108_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Invalid (Timing / clock error) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x87 0x10 to read Snapshot data of DTC 5A0687\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_109",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x86 0x10 to read Snapshot data of DTC 5A0686\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_109_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Invalid (Initialization of sensor) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x87 0x10 to read Snapshot data of DTC 5A0686\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0686",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0686"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_110",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x81 0x10 to read Snapshot data of DTC 5A0381\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_110_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x81 0x10 to read Snapshot data of DTC 5A0381\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0381",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0381"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_111",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x84 0x10 to read Snapshot data of DTC 5A0384.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_111_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x84 0x10 to read Snapshot data of DTC 5A0384.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0384",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0384"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_112",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Above Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x85 0x10 to read Snapshot data of DTC 5A0385.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_112_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Front Height Sensor - Signal Above Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x03 0x85 0x10 to read Snapshot data of DTC 5A0385.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0385",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0385"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_113",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x81 0x10 to read Snapshot data of DTC 5A0481\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_113_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x81 0x10 to read Snapshot data of DTC 5A0481\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0481",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0481"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_114",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x84 0x10 to read Snapshot data of DTC 5A0484.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_114_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x84 0x10 to read Snapshot data of DTC 5A0484.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0484",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0484"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_115",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Above Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x85 0x10 to read Snapshot data of DTC 5A0485.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_115_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Front Height Sensor - Signal Above Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x04 0x85 0x10 to read Snapshot data of DTC 5A0485.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0485",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0485"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_116",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x81 0x10 to read Snapshot data of DTC 5A0581\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_116_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x81 0x10 to read Snapshot data of DTC 5A0581\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0581",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0497"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_117",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x84 0x10 to read Snapshot data of DTC 5A0584.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_117_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Left Rear Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x05 0x84 0x10 to read Snapshot data of DTC 5A0584.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0584",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0584"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_118",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": " ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_118_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x81 0x10 to read Snapshot data of DTC 5A0685\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0585",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0585"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_119",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x81 0x10 to read Snapshot data of DTC 5A0681\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_119_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Invalid Serial Data Received(Invalid Angle Value from HS) and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x81 0x10 to read Snapshot data of DTC 5A0681\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0585",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0681"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_120",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x84 0x10 to read Snapshot data of DTC 5A0684.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_120_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Below Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x84 0x10 to read Snapshot data of DTC 5A0684.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0684",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0684"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_121",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Above Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x85 0x10 to read Snapshot data of DTC 5A0685.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n",
+        "Actual Result": "3) ECU shall respond with positive response including 14 DIDs DD00 DD01 1505 DD05 A221 3B0F 3B10 3B11 3B12 D703 EE11 D70A F18C EB00 with real time data.\n"
+    },
+    {
+        "TC#": "VTC_P800_DTCT_121_PSI5",
+        "Test Preconditions": "1) Turn Battery ON.\n2) Turn VehPwMdeStat \u2265 50\n3) Make sure system is fault free\n4)Confg_B_Snsrs = 1 ",
+        "Test Procedure": "1) Induce fault by missing Right Rear Height Sensor - Signal Above Allowable Range and wait for 5s.\n2) Ensure that Dampers are driving\n3) Send Diag Request  0x19 0x04 0x5A 0x06 0x85 0x10 to read Snapshot data of DTC 5A0685.\n4) Remove the fault that is set in Step 1 and wait for 5s\n5) Clear all DTCs by sending Diag Request 0x14 0xFF 0xFF ",
+        "Expected Result": "3) ECU shall respond with positive response including DTC $5A0685",
+        "Actual Result": "3) ECU  responded with positive response including DTC $5A0685"
+    }
+]
